@@ -1,0 +1,136 @@
+.main-div {
+    display: flex;
+    height: 80dvh;
+    width: 80dvw;
+    background: #58889d;
+    box-shadow: -15px -15px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow-x: hidden;
+}
+
+.left-div {
+    width: 40%;
+}
+
+.right-div {
+    width: 60%;
+    border-left: 2px solid #15323f;
+}
+
+.contact-div {
+    padding-right: 10px;
+    overflow-y: scroll;
+}
+
+.card-class:hover {
+    cursor: pointer;
+    background: #32505e;
+    color: #58889d;
+    border: 2px solid #32505e;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.text-field {
+    position: relative;
+    border-bottom: 2px solid #41adde;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.text-field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.text-field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #41adde;
+    text-wrap: nowrap;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.text-field span::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.text-field input:focus~label,
+.text-field input:valid~label {
+    top: -5px;
+    color: black;
+}
+
+.text-field input:focus~span::before,
+.text-field input:valid~span::before {
+    width: 100%;
+}
+
+@media screen and (max-width: 720px) {
+    .main-div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 90dvh;
+    }
+
+    .left-div {
+        height: 50%;
+        width: 100%;
+        border-bottom: 2px solid #15323f;
+        padding-bottom: 1rem;
+    }
+
+    .right-div {
+        width: 100%;
+        border: none;
+        padding-top: 10px;
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .text-field {
+        margin: 20px;
+        width: auto;
+    }
+
+    .contact-div {
+        padding: 0;
+    }
+}
